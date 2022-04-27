@@ -37,6 +37,19 @@ AthLeafAllMismatch_k_mers_list[[i]] <- bb1
 markPWMs <- getEachMarkPWMs(kmerList = bb1,KmerWeight = aa1$newKmerWeight)
 write_meme(markPWMs, file=markmotif.meme)
 ```
+### Visualize and align to known TF motifs
+<img src="Rcode/figures/motif.png" />
+
+``` r
+library(universalmotif)
+H3K27me3_AthLeaf_4_YCAAGA <- H3K27me3meme
+aa <- matrix(0,4,8)
+bb <- matrix(0,4,3)
+H3K27me3_AthLeaf_4_YCAAGA <- cbind(cbind(aa,H3K27me3meme[[4]]@motif),bb)
+p1 <- list(athMeme[[310]]@motif,H3K27me3_AthLeaf_4_YCAAGA)
+names(p1) <- c("AT3G15510(NAC)","H3K27me3_AthLeaf_4_YCAAGA")
+ggseqlogo(p1,nrow = 2)
+```
 
 ## Citation
 Zhaohong Li#, Dongwei Li#, Ye Li, Xiaoping Guo, Ruolin Yang*: Deciphering the regulatory code of histone modifications in plants. 2022
