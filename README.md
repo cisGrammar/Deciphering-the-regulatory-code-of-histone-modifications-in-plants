@@ -16,9 +16,9 @@ Using a machine learning approach, we performed a systematic and comprehensive s
 ``` r
 # The easiest way to predict histone modifications levels with DNA sequences using our R script:
 source("R1_AthLeaf_predict_HMs.R")
-peakKmerResReads.df <- getSeqFeature(peakFile=markers[i], k=6)
+peakKmerResReads.df <- getSeqFeature(peakFile=markPeakFile, k=6)
 peakFeatures.df <- getMarkerReadsSignal(peakKmerResReads.df=peakKmerResReads.df,
-                                             bamFile=bamFiles[i],peakFile = markers[i])
+                                             bamFile=bamFile,peakFile = markPeakFile)
 AthLeafPerformance <- cv(peakKmerRes.df = peakFeatures.df)
 ```
 
@@ -30,7 +30,7 @@ require(Biostrings)
 source("R5_PWM_1201.R")
 labc <-getActiveVar(peakSignal.df=mark_pos_neg_KmerRes.df)
 AthLeafAllLASSOImp[[i]] <- labc
-aa1 <- getEnrichmentImp(LASSO.impAll=labc,peakFile=markers[i])
+aa1 <- getEnrichmentImp(LASSO.impAll=labc,peakFile=markPeakFile)
 AthLeafAllEnrichmentImp[[i]] <- aa1
 bb1 <- getMismatch_k_mers_list(KmerWeight=aa1$newKmerWeight,enrichment.imp=aa1$EF1_df)
 AthLeafAllMismatch_k_mers_list[[i]] <- bb1
@@ -52,4 +52,4 @@ ggseqlogo(p1,nrow = 2)
 ```
 
 ## Citation
-Zhaohong Li#, Dongwei Li#, Ye Li, Xiaoping Guo, Ruolin Yang*: Deciphering the regulatory code of histone modifications in plants. 2022
+Zhaohong Li1^#^, Dongwei Li^#^, Ye Li, Xiaoping Guo, Ruolin Yang^*^: Deciphering the regulatory code of histone modifications in plants. 2022
