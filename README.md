@@ -20,7 +20,7 @@ peakKmerResReads.df <- getSeqFeature(peakFile=markPeakFile, k=6)
 peakFeatures.df <- getMarkerReadsSignal(peakKmerResReads.df=peakKmerResReads.df,
                                              bamFile=bamFile,peakFile = markPeakFile)
 AthLeafPerformance <- cv(peakKmerRes.df = peakFeatures.df)
-```
+### Plot the performance of HMs predictive model 
 <img src="Rcode/figures/predictions.png" />
 ```r
 library(ggpolt2)
