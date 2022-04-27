@@ -37,7 +37,7 @@ AthLeafAllMismatch_k_mers_list[[i]] <- bb1
 markPWMs <- getEachMarkPWMs(kmerList = bb1,KmerWeight = aa1$newKmerWeight)
 write_meme(markPWMs, file=markmotif.meme)
 ```
-### Visualize and align to known TF motifs
+### Visualize mark motifs and align them to known TF motifs
 <img src="Rcode/figures/motif.png" />
 
 ``` r
