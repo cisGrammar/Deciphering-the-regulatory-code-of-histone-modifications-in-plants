@@ -2,9 +2,9 @@
 ## Overview
 Histone modifications play a critical role in the dynamic regulation of spatial-temporal gene expression. 
 However, in plants, what genetic mechanisms determine the modification level of histone marks is still elusive. 
-Using machine learning approach, we performed a systematic and comprehensive study on the cis-regulatory grammar of 19 histone marks in Arabidopsis thaliana, rice and maize.
+Using a machine learning approach, we performed a systematic and comprehensive study on the cis-regulatory grammar of 19 histone marks in Arabidopsis thaliana, rice, and maize.
 
-## The schematic flowchart of GSminer <img src="Rcode/figures/flowchart.png" />
+## The schematic flowchart of our machine learning methods <img src="Rcode/figures/flowchart.png" />
 
 
 
