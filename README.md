@@ -52,4 +52,4 @@ ggseqlogo(p1,nrow = 2)
 ```
 
 ## Citation
-Zhaohong Li1<sup>#<sup>, Dongwei Li<sup>#<sup>, Ye Li, Xiaoping Guo, Ruolin Yang<sup>*<sup>: Deciphering the regulatory code of histone modifications in plants. 2022
+Zhaohong Li1<sup>#</sup>, Dongwei Li<sup>#</sup>, Ye Li, Xiaoping Guo, Ruolin Yang<sup>*</sup>: Deciphering the regulatory code of histone modifications in plants. 2022
