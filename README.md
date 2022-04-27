@@ -21,9 +21,10 @@ peakFeatures.df <- getMarkerReadsSignal(peakKmerResReads.df=peakKmerResReads.df,
                                              bamFile=bamFile,peakFile = markPeakFile)
 AthLeafPerformance <- cv(peakKmerRes.df = peakFeatures.df)
 ```
-### Plot the performance of HMs predictive model 
-<img src="Rcode/figures/predictions.png" />
-```r
+### Plot the performance of HMs predictive model
+ <img src="Rcode/figures/predictions.png" />
+
+``` r
 library(ggpolt2)
 source("R1_AthLeaf_predict_HMs.R")
 AthLeafPerformance_R_PCC_plot <- getmarkersPerformance.Rsquared.melt1(AthLeafPerformance_R_PCC)
